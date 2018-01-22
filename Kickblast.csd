@@ -39,17 +39,17 @@ reset:
 ;; QUICK PARAMETERS
 
 ;kick sustain values
-gikicksustain random 0.5, 2 ;generates kick btwn 0.5 & 2 sec long. Try long values (~4 sec) for some interesting results
-gikickfreq random 50, 300 ;kick freq
+gikicksustain random 0.01, 5 ;generates kick btwn 0.5 & 2 sec long. Try long values (~4 sec) for some interesting results
+gikickfreq random 40, 150 ;kick freq
 gikickres random 0, 0.5 ;kick resonance. Careful!
 ginitpitch random 0.001, 5 ;pitch env init point (factor of gikickfreq 0.0 - 1.0)
-giPDecayFactor random 0.1, 0.9 ;pitch decay (factor of gikicksustain 0.0 - 1.0)
+giPDecayFactor random 0.0, 0.9 ;pitch decay (factor of gikicksustain 0.0 - 1.0)
 
 ;kick attack values
-giatkdur random 0.005, 0.05 ; kick attack duration - default 0.015, 0.005
-giatkfreq random 50, 400 ;kick attack freq - default 50, 400
+giatkdur random 0.001, 0.05 ; kick attack duration - default 0.015, 0.005
+giatkfreq random 4, 150 ;kick attack freq - default 50, 400
 giatklvl random 0.1, 0.5 ;attack portion level - default 0.1, 0.5
-giFilterInit random 1000, 16000
+giFilterInit random 200, 16000
 
 gSatrb strcpy "kick-" ;file descriptor prefix (e.g. "long-", "kick-Jan12-" etc..)
 
